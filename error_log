@@ -1,0 +1,158 @@
+[17-Dec-2018 11:29:26 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:26 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:29 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:33 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:33 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:35 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:37 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:39 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:46 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:29:46 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:30:37 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:30:37 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:30:40 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:30:53 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:30:58 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:31:05 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:31:05 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:31:05 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:31:10 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:31:45 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:32:23 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:33:14 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:34:33 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:35:14 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:35:15 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:35:36 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:35:41 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:37:32 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:37:33 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:38:55 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:41:13 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:42:13 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:43:12 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:43:35 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[17-Dec-2018 11:44:57 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\ApiController::list_of_sent_request() in /home/v72appcrates/public_html/chill_app/app/Http/Controllers/ApiController.php on line 3993
+[18-Dec-2018 07:46:20 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 07:46:20 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 07:46:23 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 07:46:26 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 07:46:39 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 07:46:39 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 07:46:42 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 07:46:49 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 07:46:53 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:09:01 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:09:08 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:09:13 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:09:18 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:09:36 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:09:55 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:10:10 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:10:35 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:10:47 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:10:50 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:10:53 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:11:01 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:11:04 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:11:40 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:11:48 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:12:08 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:12:11 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:12:41 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:12:43 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:12:44 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:16:03 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:16:23 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:16:27 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:16:31 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:16:34 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:22:27 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:22:36 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:22:59 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:24:25 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:25:50 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:25:53 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:25:53 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:25:59 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:26:48 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:27:16 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:27:44 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:31:40 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:32:57 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:34:09 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:34:09 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v72appcrates/public_html/chill_app/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[18-Dec-2018 08:46:10 UTC] PHP Warning:  Uncaught ErrorException: require(/home/v71appcrates/public_html/join_app/twilio-php-master/Twilio/autoload.php): failed to open stream: No such file or directory in /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php:16
+Stack trace:
+#0 /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php(16): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/v...', '/home/v71appcra...', 16, Array)
+#1 /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php(16): require()
+#2 /home/v71appcrates/public_html/just_chill/vendor/composer/ClassLoader.php(444): include('/home/v71appcra...')
+#3 /home/v71appcrates/public_html/just_chill/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/v71appcra...')
+#4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Http\\Contro...')
+#5 [internal function]: spl_autoload_call('App\\Http\\Contro...')
+#6 /home/v71appcrates/public_html/just_chill/vendor in /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php on line 16
+[18-Dec-2018 08:46:10 UTC] PHP Fatal error:  main(): Failed opening required '/home/v71appcrates/public_html/join_app/twilio-php-master/Twilio/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php on line 16
+[18-Dec-2018 08:52:31 UTC] PHP Warning:  Uncaught ErrorException: require(/home/v71appcrates/public_html/join_app/twilio-php-master/Twilio/autoload.php): failed to open stream: No such file or directory in /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php:16
+Stack trace:
+#0 /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php(16): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/home/v...', '/home/v71appcra...', 16, Array)
+#1 /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php(16): require()
+#2 /home/v71appcrates/public_html/just_chill/vendor/composer/ClassLoader.php(444): include('/home/v71appcra...')
+#3 /home/v71appcrates/public_html/just_chill/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/v71appcra...')
+#4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Http\\Contro...')
+#5 [internal function]: spl_autoload_call('App\\Http\\Contro...')
+#6 /home/v71appcrates/public_html/just_chill/vendor in /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php on line 16
+[18-Dec-2018 08:52:31 UTC] PHP Fatal error:  main(): Failed opening required '/home/v71appcrates/public_html/join_app/twilio-php-master/Twilio/autoload.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/v71appcrates/public_html/just_chill/app/Http/Controllers/ApiController.php on line 16
+[01-Jan-2019 06:50:47 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:50:47 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:22 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:22 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:26 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:27 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:28 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:32 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:37 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:42 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:47 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:49 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:52 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:52 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:52 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:52 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:54 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:54 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:54 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:54:57 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:02 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:07 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:12 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:17 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:22 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:27 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:32 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:37 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:42 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:47 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:52 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:55:57 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:02 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:07 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:12 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:17 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:22 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:27 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:32 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:37 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:42 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:56:47 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:58:29 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:58:29 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:59:55 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 06:59:59 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 07:00:00 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 07:00:02 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 07:00:04 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 07:00:06 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 07:00:07 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 07:00:09 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 07:00:11 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242
+[01-Jan-2019 07:07:55 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/v71appcrates/public_html/just_chill/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 242

@@ -1,0 +1,2 @@
+Hi <strong>{{ $content['name'] }}</strong>,     
+    <p>Looks like you have requested to reset your password for Join Account below is your new password use this to login again into Join App <br> <b>Password: </b>{{$content['password']}}</p>
