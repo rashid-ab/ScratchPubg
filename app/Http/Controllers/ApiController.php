@@ -23,9 +23,6 @@ class ApiController extends Controller {
 
 	/*======================  SIGN UP  =====================*/
 	public function signup(Request $request){
-	    $rem_token=str_random(8);
-	    $random=str_random(7);
-	    
 	    if($request->email){
 	        $email=User::where('email',$request->email)->first();
 	    if(!is_null($email)){
@@ -36,39 +33,13 @@ class ApiController extends Controller {
         $user=User::create([
             'name'=>$request->name,
             'email'=>$request->email,
-            'phone'=>$random,
             'password'=>Hash::make($request->password),
-            'age'=>$request->age,
-            'geneder'=>$request->geneder,
-            'rem_token'=>$rem_token,
             ]);
 	    }
-	    if($request->phone){
-	        $phone=User::where('phone',$request->phone)->first();
-	    if(!is_null($phone)){
-	        return response()->json(['status' => "400",
-			'description' => "number is already exist",
-			'message' => "failure", 'data' => '']);
-	    }
-        $user=User::create([
-            'name'=>$request->name,
-            'email'=>$random,
-            'phone'=>$request->phone,
-            'password'=>Hash::make($request->password),
-            'age'=>$request->age,
-            'geneder'=>$request->geneder,
-            'rem_token'=>$rem_token,
-            ]);
-	    }
-	    $users=User::where('id',$user->id)->first();
-        return response()->json(['status' => "200",
-			'description' => "signup",
-			'message' => "success", 'data' => $users]);
     }
 	
 	/*======================  LOGIN  =====================*/
 	public function login(Request $request){
-	$randon_token=str_random(8);
 	if($request->email){
 	if(!Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
 	    return response()->json(['status' => "400",
@@ -77,36 +48,12 @@ class ApiController extends Controller {
 	}
 	
 	else{
-	    $id=User::where('email',$request->email)->first();
-	    DB::table('reme_tokens')->insert([
-	        'user_id'=>$id->id,
-	        'reme_token'=>$randon_token,
-	        ]);
-	        $data=User::join('reme_tokens','reme_tokens.user_id','=','users.id')->select('users.id','users.name','users.email','users.age','users.gender','users.image','users.subscription','users.start_date','users.end_date','users.category','reme_tokens.reme_token')->where('users.id',$id->id)->first();
-	       return response()->json(['status' => "200",
-			'description' => "login",
-			'message' => "success", 'data' => $data]);
+	    $user=User::where('email',$request->email)->first();
+	    return 	response()->json(['status' => "200",
+				'description' => "login",
+				'message' => "success", 'data' => $user]);
 	}
 	}  
-	if($request->phone){
-	    	if(!Auth::attempt(['phone'=>$request->phone,'password'=>$request->password])){
-	    return response()->json(['status' => "400",
-			'description' => "No User Exist",
-			'message' => "failure", 'data' => '']);
-	}
-	
-	else{
-	     $id=User::where('phone',$request->phone)->first();
-	    DB::table('reme_tokens')->insert([
-	        'user_id'=>$id->id,
-	        'reme_token'=>$randon_token,
-	        ]);
-	         $data=User::join('reme_tokens','reme_tokens.user_id','=','users.id')->select('users.id','users.name','users.phone','users.age','users.gender','users.image','users.subscription','users.start_date','users.end_date','users.category','reme_tokens.reme_token')->where('users.id',$id->id)->first();
-	       return response()->json(['status' => "200",
-			'description' => "login",
-			'message' => "success", 'data' => $data]);
-	}
-	}
 	}
 	
 	

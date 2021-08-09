@@ -36,7 +36,7 @@ XML;
 <html>
     <head>
         <title>Home Page</title>
-    <script type="text/javascript">                                                                                                                                                                                                                                                                                                                                                                                                                                               </script></head>
+    </head>
     <body>
         <h1>Heading</h1>
         <p>Some text</p>

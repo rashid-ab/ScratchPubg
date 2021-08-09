@@ -93,34 +93,25 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Contact Number</th>
+                <th>Coins</th>
+                <th>UC</th>
+                <th>Redeem UC</th>
                 <th>Current Status</th>
                 <th>Actions</th>
               </tr>
               </thead>
               <tbody>
                   @foreach ($users as $user)
-                @if($user->role !=0)
                     <tr>
 
                         <td>{{ $user->id }}</td>
-
                         <td>{{ $user->name }}</td>
-
                         <td>{{ $user->email }}</td>
-
-                        <td>{{ $user->phone }}</td>
-
-                         <td>
-                         <?php if ($user->status == 1) {
-	echo "Active User";
-} elseif ($user->status == 0) {
-	echo "Blocked User";
-}
-?>
-
-                         <td>
-                            <div class="icon_wraper">
+                        <td>{{ $user->coins }}</td>
+                        <td>{{ $user->uc }}</td>
+                        <td>{{ $user->redeem_uc }}</td>
+                        <td>{{ $user->status }}</td>
+                            <td><div class="icon_wraper">
                                 <?php if ($user->status == 1) {?>
                                 <a href="{{url('/block_user/'.$user->id)}}" data-toggle="tooltip" title="Block User"><button><i class="fas fa-user-slash"></i></button></a>
                                 <?php } else {?>
@@ -137,7 +128,6 @@
 
                          </td>
                     </tr>
-                                    @endif
                                     @endforeach
 
               </tbody>

@@ -17,7 +17,7 @@ $url = url()->current();
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Web Flicks</title>
+    <title>Get UC</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('dist/css')}}/bootstrap.min.css" rel="stylesheet">
@@ -101,30 +101,14 @@ li.active a {
               </button>
 
               <!--logo start-->
-              <a href="{{ Url('/manage_user') }}" class="logo"><span>Web Flicks</span></a>
+              <a href="{{ Url('/manage_user') }}" class="logo"><span>Get UC</span></a>
               <!--logo end-->
               <div class="horizontal-menu navbar-collapse collapse ">
                   <ul class="nav navbar-nav">
 
-                      <!-- <li><a href="{{ Url('/dashboard') }}">Dashboard</a></li> -->
 
                       <li class="dropdown <?php if (strpos($url, 'manage_user')) {?> active<?php }?>">
                           <a href="{{url('/manage_user')}}">Manage Users</a>
-                      </li>
-                        <li class="dropdown <?php if (strpos($url, 'manage_categories')) {?> active<?php }?>">
-                          <a href="{{url('/manage_categories')}}">Manage Genre</a>
-                      </li>
-                      <li class="dropdown <?php if (strpos($url, 'manage_seasons')) {?> active<?php }?>">
-                          <a href="{{url('/manage_seasons')}}">Manage Seasons</a>
-                      </li>
-                      <li class="dropdown <?php if (strpos($url, 'manage_films')) {?> active<?php }?>">
-                          <a href="{{url('/manage_films')}}">Manage Films</a>
-                      </li>
-                        <li class="dropdown <?php if (strpos($url, 'manage_season_no')) {?> active<?php }?>">
-                          <a href="{{url('/manage_season_no')}}">Manage Season No</a>
-                      </li>
-                      <li class="dropdown <?php if (strpos($url, 'season_episode')) {?> active<?php }?>">
-                          <a href="{{url('/season_episode')}}">Season Episode</a>
                       </li>
                      </ul>
 
@@ -166,61 +150,6 @@ li.active a {
       <!--header end-->
 
 
-
-
-
-
-
-
-
-
-
- <!--header start-->
-    <header class="header white-bg" style="display:none;">
-        <div class="sidebar-toggle-box">
-            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-        </div>
-        <!--logo start-->
-        <a href="{{ Url('/dashboard') }}" class="logo">Join<span>APP</span></a>
-        <!--logo end-->
-
-        <div class="top-nav ">
-            <!--search & user info start-->
-            <ul class="nav pull-right top-menu">
-              <!--  <li>
-                    <input type="text" class="form-control search" placeholder="Search">
-                </li>
-                -->
-                <!-- user login dropdown start-->
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <?php if (isset($com_info)) {?>
-                        <img style="width: 29px;height: 29px;" src="{{url('public/company_thumbnail').'/'.$com_info->image_name}}">
-                        <?php }?>
-                            <span class="username">{{ Auth::user()->f_name }}</span>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu extended logout">
-                        <div class="log-arrow-up"></div>
-                        <li><a href="{{url('logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
-                    </ul>
-                </li>
-
-                <!-- user login dropdown end -->
-            </ul>
-            <!--search & user info end-->
-        </div>
-    </header>
-    <!--header end-->
-</div>
-<!-- header end -->
-
-
-
-
-
-
-
 <div class="clearfix"></div>
 
 
@@ -232,149 +161,7 @@ li.active a {
 
 
 
-<aside>
-        <div id="sidebar"  class="nav-collapse ">
-            <!-- sidebar menu start-->
-            <ul class="sidebar-menu" id="nav-accordion" style="display:none !important;">
-                <li>
-                    <a class="active" href="{{ Url('/dashboard') }}">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <?php if ($user_info->role == "sa") {?>
-                 <li class="sub-menu">
 
-                    <a href="javascript:;" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Manage Companies</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="{{ url('newcompany') }}">New Company</a></li>
-
-
-                    </ul>
-                    <ul class="sub">
-                        <li><a  href="{{ url('allcompanies') }}">All Companies</a></li>
-
-
-                    </ul>
-                </li>
-
-
-
-
-
-
-                <li class="sub-menu">
-
-                    <a href="javascript:;" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Manage Services</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="{{ url('business/add_business') }}">Add Services</a></li>
-                        <li><a  href="{{ url('business/all_business') }}">All Services</a></li>
-
-                    </ul>
-                </li>
-                <li class="sub-menu">
-
-                    <a href="javascript:;" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Manage Product</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="{{ url('product/add_product') }}">Add Product</a></li>
-                        <li><a  href="{{ url('product/all_product') }}">All Product</a></li>
-
-                    </ul>
-                </li>
-
-                <?php }if ($user_info->role == "cmp") {?>
-                 <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Manage User</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="{{ url('add_user') }}">Add User</a></li>
-                        <li><a  href="{{ url('all_user') }}">All User</a></li>
-
-                    </ul>
-
-                </li>
-                <li class="sub-menu">
-
-                    <a href="javascript:;" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Manage Price</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="{{ url('price/set_price') }}">Set Price</a></li>
-
-
-                    </ul>
-                </li>
-                <?php }if ($user_info->role == "cmp" || $user_info->role == "sal") {?>
-                <li class="sub-menu">
-
-                    <a href="javascript:;" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Manage Orders</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="{{ url('order') }}">New Order</a></li>
-
-
-                    </ul>
-                    <ul class="sub">
-                        <li><a  href="{{ url('order/all_order') }}">All Orders</a></li>
-
-
-                    </ul>
-                    <ul class="sub">
-                        <li><a  href="{{ url('order/delivery_alerts') }}">Delivery Alerts</a></li>
-
-
-                    </ul>
-                    <ul class="sub">
-                        <li><a  href="{{ url('order/search_order') }}">Search Orders</a></li>
-
-
-                    </ul>
-
-
-                </li>
-
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class="fa fa-tasks"></i>
-                        <span>Manage Customers</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a  href="{{ url('newcustomer') }}">Add Customer</a></li>
-                        <li><a  href="{{ url('customers') }}">All Customer</a></li>
-
-                    </ul>
-
-                </li>
-
-               <!-- <li class="sub-menu">
-
-                    <a href="#">
-                        <i class="fa fa-tasks"></i>
-                        <span>Company Profile</span>
-                    </a>
-
-                </li>
-                    -->
-                <?php }?>
-
-            </ul>
-            <!-- sidebar menu end-->
-        </div>
-    </aside>
     <!--sidebar end-->
 
 </div>    <!-- first-column 6 end -->
@@ -396,7 +183,7 @@ li.active a {
  <!--footer start-->
     <footer class="site-footer">
         <div class="text-center">
-            {{ date('Y') }} &copy; Web Flicks
+            {{ date('Y') }} &copy; Get UC
             <a href="#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>

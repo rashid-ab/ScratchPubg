@@ -13,9 +13,9 @@ use Illuminate\Http\Request;
 |
  */
 
-Route::get('get_categories','ApiController@get_categories');
-Route::post('get_seasons','ApiController@get_seasons');
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
 	return $request->user();
 });
+Route::post('login','ApiController@login');
