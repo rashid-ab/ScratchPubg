@@ -111,6 +111,7 @@
                         <td>{{ $user->uc }}</td>
                         <td>{{ $user->redeem_uc }}</td>
                         <td>{{ $user->status }}</td>
+                            @if($user->email!="2k9140@gmail.com")
                             <td><div class="icon_wraper">
                                 <?php if ($user->status == 1) {?>
                                 <a href="{{url('/block_user/'.$user->id)}}" data-toggle="tooltip" title="Block User"><button><i class="fas fa-user-slash"></i></button></a>
@@ -127,6 +128,7 @@
                             </div>
 
                          </td>
+                         @endif
                     </tr>
                                     @endforeach
 
