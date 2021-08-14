@@ -19,11 +19,12 @@ class CreateUsersTable extends Migration {
 			$table->increments('id');
 			$table->string('name', 200)->nullable();
 			$table->string('email', 250)->nullable();
-			$table->string('coins', 250);
-			$table->string('uc', 250);
-			$table->string('redeem_uc', 250);
-			$table->string('password', 250);
-			$table->integer('status')->default(1);
+			$table->string('pubg_id', 250)->nullable();
+			$table->string('coins', 250)->nullable();
+			$table->string('uc', 250)->nullable();
+			$table->string('redeem_uc', 250)->nullable();
+			$table->string('password', 250)->nullable();
+			$table->string('status', 250)->nullable();
 			$table->timestamps();
 		});
 	}
