@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('login','ApiController@login');
 Route::post('signup','ApiController@signup');
+Route::post('silver_coins','ApiController@silver_coins');
+Route::post('golden_coins','ApiController@golden_coins');
+Route::post('platinum_coins','ApiController@platinum_coins');

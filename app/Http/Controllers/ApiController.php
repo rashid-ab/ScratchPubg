@@ -1,24 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Common;
-use App\FavoriteWord;
-use App\Payment;
 use App\User;
-use App\Word;
-use App\Slider;
-use App\Season;
-use App\Film;
-use App\Category;
 use Auth;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 // use Mail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Mail;
-
 class ApiController extends Controller {
 
 	/*======================  SIGN UP  =====================*/
@@ -63,68 +51,54 @@ class ApiController extends Controller {
 	/*======================  LOGOUT  =====================*/
 		public function logout(Request $request){
 		    $logout=DB::table('reme_tokens')->where('reme_token',$request->reme_token)->delete();
-		   return response()->json(['status' => "200",
+		    return response()->json(['status' => "200",
 			'description' => "logout",
 			'message' => "success", 'data' => 'logout successfully']);
 		    
 		}
-	
-	
-	/*======================  CATEGORIES  =====================*/
-    public function get_categories(){
-        $categories=Category::get();
-        $array=array();
-        $datas=array();
-        foreach($categories as $category){
-            $season=Season::where('category_id',$category->id)->select('id','season_name','image')->get();
-            $film=Film::where('category_id',$category->id)->select('id','film_title','film_file')->get();
-            $data=Category::join('seasons','seasons.category_id','=','categories.id')
-        ->join('films','films.category_id','=','categories.id')
-        ->select('seasons.category_id','categories.category_name','seasons.id as season_id','seasons.image','seasons.season_name','films.film_title','films.id as film_id','films.film_file')->where('categories.id',$category->id)->orderBy('categories.id','DESC')->get();
-        $array[]=array([
-                'category_id'=>$category->id,
-                'category_name'=>$category->category_name,
-                ]);
-            
-        foreach($data as $dat){
-            
-                $datas[]=array([
-                    'id'=>$dat->season_id,
-                    'name'=>$dat->season_name,
-                    'image'=>$dat->image,
-                    'id'=>$dat->film_id,
-                    'name'=>$dat->film_title,
-                    'id'=>$dat->film_file,
-                    ]);
+        public function silver_coins(Request $request){
+            $actualcoins=User::where('email',$request->email)->first();
+            $latestcoins = $actualcoins->coins+$request->coins;
+            $latesttotalcoins = $actualcoins->total_coins+$request->coins;
+            $coins=User::where('email',$request->email)->update([
+                'coins' => $latestcoins,
+                'total_coins' => $latesttotalcoins,
+                'silver_limit' => $actualcoins->silver_limit-1,
+            ]);
+            if ($coins) {
+                return response()->json(['status' => "200",
+                'description' => "win Coins",
+                'message' => "success", 'data' => $latestcoins]);
+            }
         }
-        return $datas;
-          $array1=array_push($array,$datas);
+        public function golden_coins(Request $request){
+            $actualcoins=User::where('email',$request->email)->first();
+            $latestcoins = $actualcoins->coins+$request->coins;
+            $latesttotalcoins = $actualcoins->total_coins+$request->coins;
+            $coins=User::where('email',$request->email)->update([
+                'coins' => $latestcoins,
+                'total_coins' => $latesttotalcoins,
+                'golden_limit' => $actualcoins->golden_limit-1,
+            ]);
+            if ($coins) {
+                return response()->json(['status' => "200",
+                'description' => "win Coins",
+                'message' => "success", 'data' => $latestcoins]);
+            }
         }
-        return response()->json(['status' => "200",
-			'description' => "all categories",
-			'message' => "success", 'data' => $array1]);
-    }
-    
-    /*======================  SEASONS  =====================*/
-    
-    public function get_seasons(Request $request){
-        
-        $seasons=DB::table('seasons')->
-        where('category_id',$request->category_id)->
-        get();
-        
-        return response()->json(['status' => "200",
-			'description' => "all seasons",
-			'message' => "success", 'data' => $seasons]);
-    }
-    
-    /*======================  SLIDERS  =====================*/
-    
-    public function get_slider(){
-        
-        $seasons=Slider::orderBy('id','DESC')->get();
-        return response()->json(['status' => "200",
-			'description' => "all seasons",
-			'message' => "success", 'data' => $seasons]);
-    }
+        public function platinum_coins(Request $request){
+            $actualcoins=User::where('email',$request->email)->first();
+            $latestcoins = $actualcoins->coins+$request->coins;
+            $latesttotalcoins = $actualcoins->total_coins+$request->coins;
+            $coins=User::where('email',$request->email)->update([
+                'coins' => $latestcoins,
+                'total_coins' => $latesttotalcoins,
+                'platinum_limit' => $actualcoins->platinum_limit-1,
+            ]);
+            if ($coins) {
+                return response()->json(['status' => "200",
+                'description' => "win Coins",
+                'message' => "success", 'data' => $latestcoins]);
+            }
+        }
 }
