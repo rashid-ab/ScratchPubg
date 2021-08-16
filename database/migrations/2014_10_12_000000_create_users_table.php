@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration {
 			$table->string('coins', 250)->nullable();
 			$table->string('uc', 250)->nullable();
 			$table->string('redeem_uc', 250)->nullable();
+			$table->string('total_uc', 250)->nullable();
+			$table->string('total_coins', 250)->nullable();
 			$table->string('password', 250)->nullable();
 			$table->string('status', 250)->nullable();
 			$table->timestamps();
