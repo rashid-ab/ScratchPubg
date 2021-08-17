@@ -106,7 +106,7 @@ class ApiController extends Controller {
             }
         }
         public function getUser(Request $request){
-            $user=User::find($request->email);
+            $user=User::where('email',$request->email)->first();
                 return response()->json(['status' => "200",
                 'description' => "User",
                 'message' => "success", 'data' => $user]);
