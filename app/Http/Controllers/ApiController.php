@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use Auth;
+use Illuminate\Foundation\Console\Presets\React;
 use Illuminate\Http\Request;
 // use Mail;
 use Illuminate\Support\Facades\DB;
@@ -56,6 +57,7 @@ class ApiController extends Controller {
 			'message' => "success", 'data' => 'logout successfully']);
 		    
 		}
+        /*======================  Silver Coins =====================*/
         public function silver_coins(Request $request){
             $actualcoins=User::where('email',$request->email)->first();
             $latestcoins = $actualcoins->coins+$request->coins;
@@ -71,6 +73,7 @@ class ApiController extends Controller {
                 'message' => "success", 'data' => $latestcoins]);
             }
         }
+        /*======================  Golden Coins  =====================*/
         public function golden_coins(Request $request){
             $actualcoins=User::where('email',$request->email)->first();
             $latestcoins = $actualcoins->coins+$request->coins;
@@ -86,6 +89,7 @@ class ApiController extends Controller {
                 'message' => "success", 'data' => $latestcoins]);
             }
         }
+        /*======================  Platinum Coins  =====================*/
         public function platinum_coins(Request $request){
             $actualcoins=User::where('email',$request->email)->first();
             $latestcoins = $actualcoins->coins+$request->coins;
@@ -100,5 +104,11 @@ class ApiController extends Controller {
                 'description' => "win Coins",
                 'message' => "success", 'data' => $latestcoins]);
             }
+        }
+        public function getUser(Request $request){
+            $user=User::find($request->email);
+                return response()->json(['status' => "200",
+                'description' => "User",
+                'message' => "success", 'data' => $user]);
         }
 }
