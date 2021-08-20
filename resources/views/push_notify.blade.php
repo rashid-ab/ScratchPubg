@@ -93,7 +93,7 @@
                         <div class="panel-body">
 
                         <!--         <form role="form"> -->
-                        <form role="form" method="post" action="{{ url('send_push_notification') }}" >
+                        <form role="form" method="post" action="{{ url('send_noti') }}" >
 
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

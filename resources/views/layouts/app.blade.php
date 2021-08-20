@@ -110,6 +110,9 @@ li.active a {
                       <li class="dropdown <?php if (strpos($url, 'manage_user')) {?> active<?php }?>">
                           <a href="{{url('/manage_user')}}">Manage Users</a>
                       </li>
+                      <li class="dropdown <?php if (strpos($url, 'manage_notification')) {?> active<?php }?>">
+                        <a href="{{url('/manage_notification')}}">Manage Notification</a>
+                    </li>
                      </ul>
 
               </div>
