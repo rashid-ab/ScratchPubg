@@ -105,10 +105,26 @@ class ApiController extends Controller {
                 'message' => "success", 'data' => $latestcoins]);
             }
         }
+
+        /*======================  Get User  =====================*/
+
         public function getUser(Request $request){
             $user=User::where('email',$request->email)->first();
                 return response()->json(['status' => "200",
                 'description' => "User",
                 'message' => "success", 'data' => $user]);
+        }
+
+        /*======================  Get Token  =====================*/
+
+        public function tokenupdate(Request $request){
+            $tokenupdate=User::where('email',$request->email)->update([
+                'device_token' => $request->device_token,
+            ]);
+            if ($tokenupdate) {
+                return response()->json(['status' => "200",
+                'description' => "Token",
+                'message' => "success", 'data' => $request->device_token]);
+            }
         }
 }
