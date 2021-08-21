@@ -29,6 +29,16 @@ class ApiController extends Controller {
 			'message' => "success", 'data' => '']);
 	    }
     }
+
+    /*======================  CHANGE PASSWORD  =====================*/
+	public function change_password(Request $request){
+	    $user=User::where('email',$request->email)->update([
+            'password'=>Hash::make($request->password),
+            ]);
+            return response()->json(['status' => "200",
+			'description' => "Sign up successfully!",
+			'message' => "success", 'data' => 'CHange Password Successfully!']);
+	    }
 	
 	/*======================  LOGIN  =====================*/
 	public function login(Request $request){

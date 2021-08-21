@@ -25,3 +25,4 @@ Route::post('golden_coins','ApiController@golden_coins');
 Route::post('platinum_coins','ApiController@platinum_coins');
 Route::post('getUser','ApiController@getUser');
 Route::post('tokenupdate','ApiController@tokenupdate');
+Route::post('change_password','ApiController@change_password');
