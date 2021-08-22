@@ -174,7 +174,9 @@ class ApiController extends Controller {
             // More headers
             $headers .= 'From: 2k9140@gmail.com' . "\r\n";
             mail($to, $subject, $message, $headers);
-            return response()->json('send');
+                return response()->json(['status' => "200",
+                'description' => "Forget Password",
+                'message' => "success", 'data' => "Password sent to your Email!"]);
             }
         }
 
