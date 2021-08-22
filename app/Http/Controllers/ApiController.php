@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 // use Mail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
 class ApiController extends Controller {
 
 	/*======================  SIGN UP  =====================*/
@@ -137,4 +139,16 @@ class ApiController extends Controller {
                 'message' => "success", 'data' => $request->device_token]);
             }
         }
+        public function send_mail($text, $email)
+        {
+            $data = array('text' => $text, "name" => "hahahaha");
+            $to = $email;
+            Mail::to($to)->send(new SendMail($data));
+            echo "Your Msg have been send to user via email";
+        }
+        public function send_mails(Request $request)
+        {
+            $this->send_mail('asd',$request->email);
+        }
+
 }
