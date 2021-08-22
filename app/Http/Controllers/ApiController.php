@@ -139,16 +139,43 @@ class ApiController extends Controller {
                 'message' => "success", 'data' => $request->device_token]);
             }
         }
-        public function send_mail($text, $email)
-        {
-            $data = array('text' => $text, "name" => "hahahaha");
-            $to = $email;
-            Mail::to($to)->send(new SendMail($data));
-            echo "Your Msg have been send to user via email";
-        }
-        public function send_mails(Request $request)
-        {
-            $this->send_mail('asd',$request->email);
+        public function send_mail(Request $request){
+            $email_send=User::where('email',$request->email)->first();
+            if(is_null($email_send)){
+                return response()->json(['status' => "200",
+                'description' => "Forget Password",
+                'message' => "success", 'data' => "No User for this Email!"]);
+            }
+            else{
+                $hashed_random_password = str_random(8);
+                $email_submit=User::where('id',$email_send->id)->update([
+                'password'=>Hash::make($hashed_random_password),
+            ]);
+    
+            $to      = $request->email;
+             $subject = "Password Reset";
+    
+            $message = "
+            <html>
+                <head>
+                    <title>HTML email</title>
+                </head>
+                <body>
+                    <h2>Your New Password!</h2>
+                    <h1 style=color:#f50000>$hashed_random_password</h1>
+                </body>
+            </html>
+            ";
+    
+            // Always set content-type when sending HTML email
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    
+            // More headers
+            $headers .= 'From: 2k9140@gmail.com' . "\r\n";
+            mail($to, $subject, $message, $headers);
+            return response()->json('send');
+            }
         }
 
 }
