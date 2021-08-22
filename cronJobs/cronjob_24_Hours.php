@@ -1,0 +1,101 @@
+<?php
+
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "purify";
+$servername = "localhost";
+$username = "u595034023_getuc";
+$password = "Respecteduc2021";
+$dbname = "u595034023_getuc";
+date_default_timezone_set("Europe/Stockholm");
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// echo $conn;die;
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+// $order_id=1;
+// $token='cu79QKylUTE:APA91bHx7rwvC2aDI2Oaxl8CniHNfMtTMMYjfzY77PgZGOD4w0j1QeCM-xfVHV1J1gxfPlUDkP3wepIe9h3NH4sOzuHkdRKkwg49eF09WJkckwdIRZ4IbHYaPUrDQLcP7z8vYevoJRVx';
+// $title = " No Order Completed";
+//          $body =  "Your cleaning was completed 1 hour ago please rate this cleaning. To give your feedback tap on this notification.";
+//          echo   send_push($title, $body,$token,$order_id); die;
+$users = "SELECT * from users";
+$update = "UPDATE users SET silver_limit='100',golden_limit='50',platinum_limit='30'";
+$users_results = $conn->query($orders);
+$users_token=array();
+if ($users_results->num_rows > 0) {
+ while($selected_orders = $users_results->fetch_assoc()) {
+        unset($users_token);
+        $users_token[]= $selected_orders['device_token'];
+        $title ="Scratch Limit";
+        $body =  "Your Scratch limit Renew Now";
+        echo   send_push($title, $body, $users_token,$order_id);
+    }
+
+}
+else{echo 'no';}
+
+
+ function send_push($title , $body ,$tokens,$order_id)
+    {
+        // return $tokens;
+
+        $ch = curl_init();
+        curl_setopt( $ch,CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send' );
+        curl_setopt( $ch,CURLOPT_POST, true );
+        curl_setopt( $ch,CURLOPT_RETURNTRANSFER, true );
+        curl_setopt( $ch,CURLOPT_SSL_VERIFYPEER, false );        
+        //Custom data to be sent with the push
+        $data2=array(
+            'order_id'=>$order_id,
+            'notification_type'=>'rating'
+        );
+        $data = array
+            (
+                'message'      => 'here is a message. message',
+                'title'        => $title,
+                'body'         => $body,
+                'smallIcon'    => 'small_icon',
+                'some data'    => 'Some Data',
+                'Another Data' => 'Another Data',
+                'click_action' => 'OPEN_ACTIVITY',
+                'sound'=>'default'
+               
+            );
+
+        //This array contains, the token and the notification. The 'to' attribute stores the token.
+        $arrayToSend = array(
+                             'registration_ids' => $tokens,
+                             'notification' => $data,
+                             'data' => $data2,
+                             'priority'=>'high'
+                              );
+
+        //Generating JSON encoded string form the above array.
+        $json = json_encode($arrayToSend);
+        //Setup headers:
+        $headers = array();
+        $headers[] = 'Content-Type: application/json';
+        
+        $headers[] = 'Authorization: key= AIzaSyDAAKZz29uPRcnsenJUbLLtL0m2Gko2vxw';
+
+
+        //Setup curl, add headers and post parameters.
+        
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+        curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);       
+
+        //Send the request
+        $response = curl_exec($ch);
+
+        //Close request
+        curl_close($ch);
+        return $response;
+
+        // echo $response;
+
+    }
+
+?>
