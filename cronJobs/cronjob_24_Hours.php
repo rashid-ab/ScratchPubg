@@ -23,7 +23,8 @@ if ($conn->connect_error) {
 //          echo   send_push($title, $body,$token,$order_id); die;
 $users = "SELECT * from users";
 $update = "UPDATE users SET silver_limit='100',golden_limit='50',platinum_limit='30'";
-$users_results = $conn->query($orders);
+$users_results = $conn->query($users);
+$userss = $conn->query($update);
 $users_token=array();
 if ($users_results->num_rows > 0) {
  while($selected_orders = $users_results->fetch_assoc()) {
