@@ -130,9 +130,11 @@ class ApiController extends Controller {
         /*======================  Get Token  =====================*/
 
         public function tokenupdate(Request $request){
+            
             $tokenupdate=User::where('email',$request->email)->update([
                 'device_token' => $request->device_token,
             ]);
+            
             if ($tokenupdate) {
                 return response()->json(['status' => "200",
                 'description' => "Token",
