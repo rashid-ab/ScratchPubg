@@ -112,19 +112,15 @@
                         <td>{{ $user->redeem_uc }}</td>
                         <td>{{ $user->status }}</td>
                             @if($user->email!="2k9140@gmail.com")
-                            <td><div class="icon_wraper">
-                                <?php if ($user->status == 1) {?>
-                                <a href="{{url('/block_user/'.$user->id)}}" data-toggle="tooltip" title="Block User"><button><i class="fas fa-user-slash"></i></button></a>
-                                <?php } else {?>
-                                <!--<button><i class=""></i></button>-->
-                                <a href="{{url('/un_block_user/'.$user->id)}}" data-toggle="tooltip" title="UnBlock User"><button><i class="fas fa-user-alt"></i></button></a>
-                                <?php }?>
-                                <a id="{{$user->id}}" class="user_details" data-toggle="tooltip" title="User Detail">
-                                  <button data-toggle="modal" data-target="#myModalview">
-                                    <i class="fas fa-eye"></i>
-                                </button></a>
-
-                                <a id="{{url('/delete_user/'.$user->id)}}" class="delete_user" data-toggle="tooltip" title="Delete User"><button><i class="fas fa-trash"></i></button></a>
+                            <td><div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown button
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
                             </div>
 
                          </td>
