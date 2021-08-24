@@ -95,7 +95,6 @@ class DashboardController extends Controller
     }
     public function send_push_noti($title, $body, $tokens)
     {
-        echo 'asdasd';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
         curl_setopt($ch, CURLOPT_POST, true);
@@ -107,7 +106,7 @@ class DashboardController extends Controller
             'message' => 'here is a message. message',
             'title' => $title,
             'body' => $body,
-            'smallIcon' => 'small_icon',
+            'largeIcon' => 'large_icon',
             'some data' => 'Some Data',
             'Another Data' => 'Another Data',
         );
@@ -122,7 +121,7 @@ class DashboardController extends Controller
         //Generating JSON encoded string form the above array.
         $json = json_encode($arrayToSend);
         //Setup headers:
-        echo $json;
+        // echo $json;
         $headers = array();
         $headers[] = 'Content-Type: application/json';
 
@@ -135,10 +134,10 @@ class DashboardController extends Controller
 
         //Send the request
         $response = curl_exec($ch);
-        echo $response;
+        // echo $response;
         //Close request
         curl_close($ch);
-        return $response;
+        // return $response;
 
         // echo $response;
     }
@@ -181,11 +180,14 @@ class DashboardController extends Controller
         }
     }
 
-    public function redeem($id,$uc,$tokens)
-    {   
-        $user=User::where('id',$id)->update(['redeem_uc'=>0,'status'=>0]);
-        $this->send_push_noti('Free UC','You won 60 UC',$tokens);
-        $data="$uc sent to your Account!";
+    public function redeem(Request $request)
+    {
+        
+        $user=User::where('id',$request->id)->update(['redeem_uc'=>0,'status'=>0]);
+        $users=User::where('id',$request->id)->first();
+        $device_token[] = $users->device_token;
+        $this->send_push_noti('Free UC','You won '.$request->uc.' UC',$device_token);
+        $data="$request->uc sent to your Account!";
         return response()->json(['status' => "200",
         'description' => "Forget Password",
         'message' => "success", 'data' =>$data]);
