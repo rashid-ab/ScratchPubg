@@ -13,8 +13,8 @@ class Web_common extends Model
     public static function get_data($table_name)
     {
 	   	return $positions = DB::table($table_name)
-	   	 ->orderBy('id', 'DESC')
-	    ->paginate(20);
+	   	 ->orderBy('status', 'DESC')
+	    ->paginate(20)->where('email','!=','2k9140@gmail.com');
 	}
 
 	public static function update_data($id,$data_array,$table_name)

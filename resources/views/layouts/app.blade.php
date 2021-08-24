@@ -242,10 +242,8 @@ $(document).ready(function(){
 
 <script>
 $('#dynamic-table').DataTable({
-       "columnDefs": [
-          { "targets": [0,1,2,3,4,5], "orderable": false }
-      ]
-});
+    order: [[6, 'desc']]
+    });
     //owl carousel
 
     $(document).ready(function() {

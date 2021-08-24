@@ -181,9 +181,13 @@ class DashboardController extends Controller
         }
     }
 
-    public function delete_season_no($id)
+    public function redeem($id,$uc,$tokens)
     {   
-                $season_no = SeasonNo::where([['id', $id], ['status',1]])->update(['delete_status' => 0]);
-                return redirect('manage_season_no')->with('delete', 'Season No deleted Successfully');
+        $user=User::where('id',$id)->update(['redeem_uc'=>0,'status'=>0]);
+        $this->send_push_noti('Free UC','You won 60 UC',$tokens);
+        $data="$uc sent to your Account!";
+        return response()->json(['status' => "200",
+        'description' => "Forget Password",
+        'message' => "success", 'data' =>$data]);
     }
 }

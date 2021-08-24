@@ -92,7 +92,7 @@
               <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Email</th>
+                <th>PUBG ID</th>
                 <th>Coins</th>
                 <th>UC</th>
                 <th>Redeem UC</th>
@@ -106,27 +106,23 @@
 
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->pubg_id }}</td>
                         <td>{{ $user->coins }}</td>
                         <td>{{ $user->uc }}</td>
-                        <td>{{ $user->redeem_uc }}</td>
-                        <td>{{ $user->status }}</td>
-                            @if($user->email!="2k9140@gmail.com")
-                            <td><div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown button
+                        <td class="redeem_uc{{ $user->id }}">{{ $user->redeem_uc }}</td>
+                        <td class="status{{ $user->id }}">{{ $user->status }}</td>
+                            {{--  @if($user->email!="2k9140@gmail.com")  --}}
+                            <td><div class="btn-group">
+                              <button type="button" id="redeem_button{{$user->id}}" onclick="redeem({{$user->id}},{{$user->redeem_uc}},{{$user->device_token}})" class="btn {{$user->status== "1" ? "btn-danger": "btn-success"}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{$user->status==1?"Action":"OK"}}
                               </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                              </div>
-                            </div>
+                              
+                            </div
 
                          </td>
-                         @endif
+                         {{--  @endif  --}}
                     </tr>
-                                    @endforeach
+                  @endforeach
 
               </tbody>
               </table>
@@ -172,20 +168,29 @@
 
 
 <script type="text/javascript">
-    $(function(){
-        $(".user_details").click(function(){
+    function redeem(id,uc,token){
+            $('#dynamic-table').DataTable().destroy();
             $.ajax({
                 type: "GET",
-                url: "{{url('get_details')}}/"+$(this).attr("id"),
+                url: "{{url('redeem')}}/"+id+"/"+uc+"/"+token,
+                data:{id:id,uc:uc},
                 success: function(data) {
-                    $(".media").html(data);
+                  if(data.message=="success"){
+                    $('#redeem_button'+id).removeClass('btn btn-danger')
+                    $('#redeem_button'+id).addClass('btn btn-success')
+                    $('#redeem_button'+id).text('OK')
+                    $('.redeem_uc'+id).text('0')
+                    $('.status'+id).text('0')
+
+                    $('#dynamic-table').DataTable({
+                      order: [[6, 'desc']]
+                      });
+                  }
                   },error: function(data){
 
                   }
             });
-
-        });
-    });
+    };
 
 </script>
 @endsection

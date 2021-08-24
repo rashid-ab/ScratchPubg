@@ -25,12 +25,13 @@ class CreateUsersTable extends Migration {
 			$table->string('platinum_limit', 250)->default(30);
 			$table->string('coins', 250)->default(0);
 			$table->string('uc', 250)->default(0);
-			$table->string('redeem_uc', 250)->nullable();
-			$table->string('total_uc', 250)->nullable();
-			$table->string('total_coins', 250)->nullable();
+			$table->string('redeem_uc', 250)->default(0);
+			$table->string('total_uc', 250)->default(0);
+			$table->string('total_coins', 250)->default(0);
 			$table->string('password', 1000)->nullable();
 			$table->string('device_token', 1000)->nullable();
-			$table->string('status', 250)->nullable();
+			$table->string('remember_token', 1000)->nullable();
+			$table->string('status', 250)->default(0);
 			$table->timestamps();
 		});
 	}
