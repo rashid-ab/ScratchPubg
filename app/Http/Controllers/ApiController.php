@@ -141,6 +141,10 @@ class ApiController extends Controller {
                 'message' => "success", 'data' => $request->device_token]);
             }
         }
+
+
+        /*======================  Send Mail  =====================*/
+
         public function send_mail(Request $request){
             $email_send=User::where('email',$request->email)->first();
             if(is_null($email_send)){
@@ -179,6 +183,24 @@ class ApiController extends Controller {
                 return response()->json(['status' => "200",
                 'description' => "Forget Password",
                 'message' => "success", 'data' => "Password sent to your Email!"]);
+            }
+        }
+
+        /*======================  Redeem  =====================*/
+
+        public function redeem(Request $request){
+            
+            $tokenupdate=User::where('email',$request->email)->update([
+                'pubg_id' => $request->pubg_id,
+                'redeem_uc' => $request->redeem_uc,
+                'uc' => $request->uc,
+                'coins' => $request->coins,
+            ]);
+            
+            if ($tokenupdate) {
+                return response()->json(['status' => "200",
+                'description' => "Token",
+                'message' => "success", 'data' => $request->device_token]);
             }
         }
 

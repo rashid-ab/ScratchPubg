@@ -30,5 +30,5 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/manage_notification', 'DashboardController@manage_notification');
     Route::post('/send_pass_var', 'RegisterController@sendPasswordVar');
     Route::post('/send_noti', 'DashboardController@send_noti');
-    Route::get('/redeem/{id}/{uc}', 'DashboardController@redeem');
+    Route::post('/redeem', 'DashboardController@redeem');
 });
