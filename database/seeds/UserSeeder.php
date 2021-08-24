@@ -16,27 +16,61 @@ class UserSeeder extends Seeder
                 "name" => "System Admin",
                 "email" => "2k9140@gmail.com",
                 "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
                 "name" => "Client",
-                "email" => "abc@a.com",
-                "password" => Hash::make('12341234'),
+                "email" => "rashidbuttuog@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
                 "name" => "Client",
-                "email" => "abc@a1.com",
-                "password" => Hash::make('12341234'),
+                "email" => "rashidbuttuog12121212@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
                 "name" => "Client",
-                "email" => "abc@a2.com",
-                "password" => Hash::make('12341234'),
+                "email" => "rashidbuttuog21212@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
                 "name" => "Client",
-                "email" => "abc@a3.com",
-                "password" => Hash::make('12341234'),
+                "email" => "rashidbuttuog221@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
                 "name" => "Client",
-                "email" => "abc@a4.com",
-                "password" => Hash::make('12341234'),
+                "email" => "rashidbuttuog122@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
                 "name" => "Client",
-                "email" => "abc@a5.com",
-                "password" => Hash::make('12341234'),
+                "email" => "rashidbuttuog121@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
                 "name" => "Client",
-                "email" => "abc@a6.com",
-                "password" => Hash::make('12341234'),
+                "email" => "rashidbuttuog21@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
+                "name" => "Client",
+                "email" => "rashidbuttuog11@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
+            ),
+            array(
+                "name" => "Client",
+                "email" => "rashidbuttuog12@gmail.com",
+                "password" => Hash::make('respecteduc'),
+                
             ),
         );
         foreach ($admins as $admin) {
