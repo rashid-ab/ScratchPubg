@@ -231,10 +231,10 @@ class ApiController extends Controller {
             }
         }
         public function profile(Request $request){
-            $profiles=User::where('email',$request->email)->first();
             $profile=User::where('email',$request->email)->update([
                 'name' => $request->name,
             ]);
+            $profiles=User::where('email',$request->email)->first();
             if ($profile) {
                 return response()->json(['status' => "200",
                 'description' => "Token",
