@@ -75,12 +75,18 @@ class ApiController extends Controller {
             $latestcoins = $user->coins+$request->coins;
             $latesttotalcoins = $user->total_coins+$request->coins;
             $limit=$user->silver_limit-1;
+            if($user->total_uc<$request->uc){
+                $uc=$user->total_uc+$request->uc;
+            }
+            if($user->total_uc==$request->uc){
+                $uc=0;
+            }
             $coins=User::where('email',$request->email)->update([
                 'coins' => $latestcoins,
                 'total_coins' => $latesttotalcoins,
                 'silver_limit' => $limit,
-                'uc' => $user->uc+$request->uc,
-                'total_uc' => $user->total_uc+$request->uc,
+                'uc' => $request->uc,
+                'total_uc' => $user->total_uc+$uc,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
@@ -94,12 +100,18 @@ class ApiController extends Controller {
             $latestcoins = $user->coins+$request->coins;
             $latesttotalcoins = $user->total_coins+$request->coins;
             $limit=$user->golden_limit-1;
+            if($user->total_uc<$request->uc){
+                $uc=$user->total_uc+$request->uc;
+            }
+            if($user->total_uc==$request->uc){
+                $uc=0;
+            }
             $coins=User::where('email',$request->email)->update([
                 'coins' => $latestcoins,
                 'total_coins' => $latesttotalcoins,
                 'golden_limit' => $limit,
-                'uc' => $user->uc+$request->uc,
-                'total_uc' => $user->total_uc+$request->uc,
+                'uc' => $request->uc,
+                'total_uc' => $user->total_uc+$uc,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
@@ -124,7 +136,7 @@ class ApiController extends Controller {
                 'total_coins' => $latesttotalcoins,
                 'platinum_limit' => $limit,
                 'uc' => $request->uc,
-                'total_uc' => $uc,
+                'total_uc' => $user->total_uc+$uc,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
