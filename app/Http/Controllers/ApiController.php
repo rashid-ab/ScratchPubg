@@ -71,50 +71,53 @@ class ApiController extends Controller {
 		}
         /*======================  Silver Coins =====================*/
         public function silver_coins(Request $request){
-            $actualcoins=User::where('email',$request->email)->first();
-            $latestcoins = $actualcoins->coins+$request->coins;
-            $latesttotalcoins = $actualcoins->total_coins+$request->coins;
+            $user=User::where('email',$request->email)->first();
+            $latestcoins = $user->coins+$request->coins;
+            $latesttotalcoins = $user->total_coins+$request->coins;
+            $limit=$user->silver_limit-1;
             $coins=User::where('email',$request->email)->update([
                 'coins' => $latestcoins,
                 'total_coins' => $latesttotalcoins,
-                'silver_limit' => $actualcoins->silver_limit-1,
+                'silver_limit' => $limit,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'data' => $latestcoins]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit]);
             }
         }
         /*======================  Golden Coins  =====================*/
         public function golden_coins(Request $request){
-            $actualcoins=User::where('email',$request->email)->first();
-            $latestcoins = $actualcoins->coins+$request->coins;
-            $latesttotalcoins = $actualcoins->total_coins+$request->coins;
+            $user=User::where('email',$request->email)->first();
+            $latestcoins = $user->coins+$request->coins;
+            $latesttotalcoins = $user->total_coins+$request->coins;
+            $limit=$user->golden_limit-1;
             $coins=User::where('email',$request->email)->update([
                 'coins' => $latestcoins,
                 'total_coins' => $latesttotalcoins,
-                'golden_limit' => $actualcoins->golden_limit-1,
+                'golden_limit' => $limit,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'data' => $latestcoins]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit]);
             }
         }
         /*======================  Platinum Coins  =====================*/
         public function platinum_coins(Request $request){
-            $actualcoins=User::where('email',$request->email)->first();
-            $latestcoins = $actualcoins->coins+$request->coins;
-            $latesttotalcoins = $actualcoins->total_coins+$request->coins;
+            $user=User::where('email',$request->email)->first();
+            $latestcoins = $user->coins+$request->coins;
+            $latesttotalcoins = $user->total_coins+$request->coins;
+            $limit=$user->platinum_limit-1;
             $coins=User::where('email',$request->email)->update([
                 'coins' => $latestcoins,
                 'total_coins' => $latesttotalcoins,
-                'platinum_limit' => $actualcoins->platinum_limit-1,
+                'platinum_limit' => $limit,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'data' => $latestcoins]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit]);
             }
         }
 
