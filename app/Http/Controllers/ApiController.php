@@ -235,11 +235,39 @@ class ApiController extends Controller {
                 'name' => $request->name,
             ]);
             $profiles=User::where('email',$request->email)->first();
+
             if ($profile) {
                 return response()->json(['status' => "200",
                 'description' => "Token",
                 'message' => "success", 'data' => $profiles]);
             }
         }
-
+        public function query(Request $request){
+            $to      = $request->email;
+            $from='scratchouc@gmail.com';
+            $subject = $request->subject;
+    
+            $message = "
+            <html>
+                <head>
+                    <title>HTML email</title>
+                </head>
+                <body>
+                    <h2>User Query!</h2>
+                    <p style=color:#f50000>$request->message</p>
+                </body>
+            </html>
+            ";
+    
+            // Always set content-type when sending HTML email
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    
+            // More headers
+            $headers .= 'From: '.$to.'' . "\r\n";
+            mail($from, $subject, $message, $headers);
+                return response()->json(['status' => "200",
+                'description' => "User Query",
+                'message' => "success", 'data' => "Your Email Sent!"]);
+            }
 }
