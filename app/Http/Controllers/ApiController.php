@@ -79,11 +79,13 @@ class ApiController extends Controller {
                 'coins' => $latestcoins,
                 'total_coins' => $latesttotalcoins,
                 'silver_limit' => $limit,
+                'uc' => $user->uc+$request->uc,
+                'total_uc' => $user->total_uc+$request->uc,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$request->uc]);
             }
         }
         /*======================  Golden Coins  =====================*/
@@ -96,11 +98,13 @@ class ApiController extends Controller {
                 'coins' => $latestcoins,
                 'total_coins' => $latesttotalcoins,
                 'golden_limit' => $limit,
+                'uc' => $user->uc+$request->uc,
+                'total_uc' => $user->total_uc+$request->uc,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$request->uc]);
             }
         }
         /*======================  Platinum Coins  =====================*/
@@ -113,11 +117,13 @@ class ApiController extends Controller {
                 'coins' => $latestcoins,
                 'total_coins' => $latesttotalcoins,
                 'platinum_limit' => $limit,
+                'uc' => $user->uc+$request->uc,
+                'total_uc' => $user->total_uc+$request->uc,
             ]);
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$request->uc]);
             }
         }
 
