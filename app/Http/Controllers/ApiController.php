@@ -230,5 +230,16 @@ class ApiController extends Controller {
                 'message' => "success", 'data' => $request->device_token]);
             }
         }
+        public function profile(Request $request){
+            $profiles=User::where('email',$request->email)->first();
+            $profile=User::where('email',$request->email)->update([
+                'name' => $request->name,
+            ]);
+            if ($profile) {
+                return response()->json(['status' => "200",
+                'description' => "Token",
+                'message' => "success", 'data' => $profiles]);
+            }
+        }
 
 }
