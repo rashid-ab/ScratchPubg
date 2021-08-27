@@ -75,8 +75,8 @@ class ApiController extends Controller {
             $latestcoins = $user->coins+$request->coins;
             $latesttotalcoins = $user->total_coins+$request->coins;
             $limit=$user->silver_limit-1;
-            if($request->uc>0){
-                $uc=$user->total_uc+$request->uc;
+            if($request->uc>$user->uc){
+                $uc=1;
             }
             else{
                 $uc=0;
@@ -91,7 +91,7 @@ class ApiController extends Controller {
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$request->uc]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$uc]);
             }
         }
         /*======================  Golden Coins  =====================*/
@@ -100,8 +100,8 @@ class ApiController extends Controller {
             $latestcoins = $user->coins+$request->coins;
             $latesttotalcoins = $user->total_coins+$request->coins;
             $limit=$user->golden_limit-1;
-            if($request->uc>0){
-                $uc=$user->total_uc+$request->uc;
+            if($request->uc>$user->uc){
+                $uc=1;
             }
             else{
                 $uc=0;
@@ -125,8 +125,8 @@ class ApiController extends Controller {
             $latestcoins = $user->coins+$request->coins;
             $latesttotalcoins = $user->total_coins+$request->coins;
             $limit=$user->platinum_limit-1;
-            if($request->uc>0){
-                $uc=$user->total_uc+$request->uc;
+            if($request->uc>$user->uc){
+                $uc=1;
             }
             else{
                 $uc=0;
