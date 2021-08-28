@@ -19,7 +19,7 @@ class ApiController extends Controller {
 	    if(!is_null($email)){
 	        return response()->json(['status' => "400",
 			'description' => "email already exist",
-			'message' => "failure", 'data' => '']);
+			'message' => "email already exist", 'data' => '']);
 	    }
         $user=User::create([
             'name'=>$request->name,
