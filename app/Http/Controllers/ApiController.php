@@ -38,8 +38,8 @@ class ApiController extends Controller {
             'password'=>Hash::make($request->password),
             ]);
             return response()->json(['status' => "200",
-			'description' => "Sign up successfully!",
-			'message' => "success", 'data' => 'CHange Password Successfully!']);
+			'description' => "Change Password Successfully!",
+			'message' => "success", 'data' => 'Change Password Successfully!']);
 	    }
 	
 	/*======================  LOGIN  =====================*/
@@ -48,7 +48,7 @@ class ApiController extends Controller {
 	if(!Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
 	    return response()->json(['status' => "400",
 			'description' => "No User Exist",
-			'message' => "failure", 'data' => '']);
+			'message' => "No User Exist", 'data' => '']);
 	}
 	
 	else{
