@@ -90,6 +90,7 @@ class DashboardController extends Controller
         // echo $User;
         foreach($User as $use){
             $tokens[] = $use->device_token;
+            echo $use->device_token;
             $this->send_push_noti('Free UC','You won 60 UC',$tokens);
         }
     }
