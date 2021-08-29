@@ -216,18 +216,21 @@ class ApiController extends Controller {
         /*======================  Redeem  =====================*/
 
         public function redeem(Request $request){
-            
+            $user=User::where('email',$request->email)->first();
+            $remianing_uc=$user->uc-$request->uc;
+            $coins=$request->uc*1000;
+            $remianing_coins=$user->coins-$coins;
             $tokenupdate=User::where('email',$request->email)->update([
                 'pubg_id' => $request->pubg_id,
-                'redeem_uc' => $request->redeem_uc,
-                'uc' => $request->uc,
-                'coins' => $request->coins,
+                'redeem_uc' => $user->redeem_uc+$request->uc,
+                'uc' => $remianing_uc,
+                'coins' => $remianing_coins,
             ]);
             
             if ($tokenupdate) {
                 return response()->json(['status' => "200",
                 'description' => "Token",
-                'message' => "success", 'data' => $request->device_token]);
+                'message' => "success", 'remianing_coins' => $remianing_coins,'remianing_uc'=>$remianing_uc]);
             }
         }
         public function profile(Request $request){

@@ -86,7 +86,7 @@ class DashboardController extends Controller
     /****************** Bilal ******************************************/
 
     public function send_noti(){
-        $User=User::all('device_token');
+        $User=User::where('device_token','!=','')->get();
         echo $User;
         foreach($User as $use){
             $tokens[] = $use->device_token;

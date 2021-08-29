@@ -31,3 +31,4 @@ Route::post('forget_password','ApiController@forget_password');
 Route::post('send_mail','ApiController@send_mail');
 Route::post('profile','ApiController@profile');
 Route::post('query','ApiController@query');
+Route::post('redeem','ApiController@redeem');
