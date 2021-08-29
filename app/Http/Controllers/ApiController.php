@@ -170,7 +170,7 @@ class ApiController extends Controller {
         }
 
 
-        /*======================  Send Mail  =====================*/
+        /*======================  Forget Password  =====================*/
 
         public function send_mail(Request $request){
             $email_send=User::where('email',$request->email)->first();
