@@ -89,6 +89,7 @@ class DashboardController extends Controller
         $User=User::where('device_token','!=','')->get();
         // echo $User;
         foreach($User as $use){
+            $token=array();
             $tokens[] = $use->device_token;
             echo $use->device_token;
             $this->send_push_noti('Free UC','You won 60 UC',$tokens);
