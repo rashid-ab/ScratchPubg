@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 // $title = " No Order Completed";
 //          $body =  "Your cleaning was completed 1 hour ago please rate this cleaning. To give your feedback tap on this notification.";
 //          echo   send_push($title, $body,$token,$order_id); die;
-$users = "SELECT * from users";
+$users = "SELECT * from users WHERE device_token!=''";
 $update = "UPDATE users SET silver_limit='100',golden_limit='50',platinum_limit='30'";
 $users_results = $conn->query($users);
 $userss = $conn->query($update);
