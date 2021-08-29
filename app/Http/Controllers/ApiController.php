@@ -221,7 +221,7 @@ class ApiController extends Controller {
             $coins=$request->uc*1000;
             $remianing_coins=$user->coins-$coins;
             $tokenupdate=User::where('email',$request->email)->update([
-                'pubg_id' => $request->pubg_id,
+                'pubg_id' => $request->id,
                 'redeem_uc' => $user->redeem_uc+$request->uc,
                 'uc' => $remianing_uc,
                 'coins' => $remianing_coins,
@@ -272,5 +272,12 @@ class ApiController extends Controller {
                 return response()->json(['status' => "200",
                 'description' => "User Query",
                 'message' => "success", 'data' => "Your Email Sent!"]);
-            }
+        }
+        public function leaderboard(){
+            
+            $profiles=User::where('email','!=','2k9140@gmail.com')->orderBy('total_coins','DESC')->get();
+                return response()->json(['status' => "200",
+                'description' => "Token",
+                'message' => "success", 'data' => $profiles]);
+        }
 }

@@ -9,18 +9,10 @@ $username = "u595034023_getuc";
 $password = "Respecteduc2021";
 $dbname = "u595034023_getuc";
 date_default_timezone_set("Europe/Stockholm");
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-// echo $conn;die;
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-// $order_id=1;
-// $token='cu79QKylUTE:APA91bHx7rwvC2aDI2Oaxl8CniHNfMtTMMYjfzY77PgZGOD4w0j1QeCM-xfVHV1J1gxfPlUDkP3wepIe9h3NH4sOzuHkdRKkwg49eF09WJkckwdIRZ4IbHYaPUrDQLcP7z8vYevoJRVx';
-// $title = " No Order Completed";
-//          $body =  "Your cleaning was completed 1 hour ago please rate this cleaning. To give your feedback tap on this notification.";
-//          echo   send_push($title, $body,$token,$order_id); die;
 $users = "SELECT * from users WHERE device_token!=''";
 $update = "UPDATE users SET silver_limit='100',golden_limit='50',platinum_limit='30'";
 $users_results = $conn->query($users);
