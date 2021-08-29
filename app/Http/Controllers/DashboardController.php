@@ -96,7 +96,7 @@ class DashboardController extends Controller
     }
     public function send_push_noti($title, $body, $tokens)
     {
-        echo $tokens;
+        print_r( $tokens);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
         curl_setopt($ch, CURLOPT_POST, true);
