@@ -137,7 +137,7 @@ class DashboardController extends Controller
         // echo $response;
         //Close request
         curl_close($ch);
-        // return $response;
+        return $response;
 
         // echo $response;
     }
