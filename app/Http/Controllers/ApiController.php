@@ -275,7 +275,7 @@ class ApiController extends Controller {
         }
         public function leaderboard(){
             
-            $profiles=User::where('email','!=','2k9140@gmail.com')->orderBy('total_coins','ASC')->get();
+            $profiles=User::where('email','!=','2k9140@gmail.com')->orderBy('total_coins','DESC')->get();
                 return response()->json(['status' => "200",
                 'description' => "Token",
                 'message' => "success", 'data' => $profiles]);
