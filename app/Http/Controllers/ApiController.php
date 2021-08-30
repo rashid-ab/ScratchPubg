@@ -243,7 +243,7 @@ class ApiController extends Controller {
                 return response()->json(['status' => "200",
                 'description' => "Token",
                 'message' => "success", 'data' => $profiles]);
-            }
+            }/,   ,
         }
         public function query(Request $request){
             $to      = $request->email;
