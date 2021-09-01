@@ -84,7 +84,7 @@ class ApiController extends Controller {
         /*======================  Golden Limit  =====================*/
         public function golden_limit(Request $request){
             $coins=User::where('email',$request->email)->update([
-                'silver_limit' => 10,
+                'golden_limit' => 10,
                 
             ]);
             if ($coins) {
@@ -96,7 +96,7 @@ class ApiController extends Controller {
         /*======================  Platinum Limit  =====================*/
         public function platinum_limit(Request $request){
             $coins=User::where('email',$request->email)->update([
-                'silver_limit' => 10,
+                'platinum_limit' => 10,
                 
             ]);
             if ($coins) {
