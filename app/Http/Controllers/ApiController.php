@@ -116,7 +116,7 @@ class ApiController extends Controller {
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$request->uc]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$uc]);
             }
         }
         /*======================  Platinum Coins  =====================*/
@@ -141,7 +141,7 @@ class ApiController extends Controller {
             if ($coins) {
                 return response()->json(['status' => "200",
                 'description' => "win Coins",
-                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$request->uc]);
+                'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$uc]);
             }
         }
 
@@ -275,9 +275,9 @@ class ApiController extends Controller {
         }
         public function leaderboard(){
             
-            $profiles=User::orderBy('total_coins','DESC')->where('email','!=','2k9140@gmail.com')->get();
+            $profiles=User::where('email','!=','2k9140@gmail.com')->orderBy('total_coins','DESC')->get();
                 return response()->json(['status' => "200",
-                'description' => "Token",
+                'description' => "LeaderBoard",
                 'message' => "success", 'data' => $profiles]);
         }
 }
