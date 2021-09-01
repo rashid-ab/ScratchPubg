@@ -69,6 +69,43 @@ class ApiController extends Controller {
 			'message' => "success", 'data' => 'logout successfully']);
 		    
 		}
+        /*======================  Silver Limit =====================*/
+        public function silver_limit(Request $request){
+            $coins=User::where('email',$request->email)->update([
+                'silver_limit' => 10,
+                
+            ]);
+            if ($coins) {
+                return response()->json(['status' => "200",
+                'description' => "win Coins",
+                'message' => "success",'limit'=>10]);
+            }
+        }
+        /*======================  Golden Limit  =====================*/
+        public function golden_limit(Request $request){
+            $coins=User::where('email',$request->email)->update([
+                'silver_limit' => 10,
+                
+            ]);
+            if ($coins) {
+                return response()->json(['status' => "200",
+                'description' => "win Coins",
+                'message' => "success",'limit'=>10]);
+            }
+        }
+        /*======================  Platinum Limit  =====================*/
+        public function platinum_limit(Request $request){
+            $coins=User::where('email',$request->email)->update([
+                'silver_limit' => 10,
+                
+            ]);
+            if ($coins) {
+                return response()->json(['status' => "200",
+                'description' => "win Coins",
+                'message' => "success",'limit'=>10]);
+            }
+        }
+
         /*======================  Silver Coins =====================*/
         public function silver_coins(Request $request){
             $user=User::where('email',$request->email)->first();
@@ -144,6 +181,7 @@ class ApiController extends Controller {
                 'message' => "success", 'coins' => $latestcoins,'limit'=>$limit,'uc'=>$user->uc+$uc]);
             }
         }
+
 
         /*======================  Get User  =====================*/
 
