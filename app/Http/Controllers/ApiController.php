@@ -263,6 +263,7 @@ class ApiController extends Controller {
                 'redeem_uc' => $user->redeem_uc+$request->uc,
                 'uc' => $remianing_uc,
                 'coins' => $remianing_coins,
+                'status'=>1
             ]);
             
             if ($tokenupdate) {
