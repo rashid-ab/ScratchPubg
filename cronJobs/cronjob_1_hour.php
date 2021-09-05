@@ -23,7 +23,12 @@ if ($users_results->num_rows > 0) {
         unset($users_token);
         $users_token[]= $selected_orders['device_token'];
         $title ="Scratch Limit";
-        $body =  "Your limit is Renew now.<?php<br/>?> <?php<h2>Go to the App and Earn your UC</h2>?> ";
+        $body =  "Your limit is Renew now.<html>
+        
+        <body>
+            <h2>Go to the App and Earn your UC</h2>
+        </body>
+    </html> ";
         echo   send_push($title, $body, $users_token,$order_id);
     }
 
